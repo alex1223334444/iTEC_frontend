@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
+import "./Login.css"
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -40,9 +41,9 @@ export default function Login() {
   }
 
   return (
-    <div className="Login">
-      <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="email">
+    <div  className="Login">
+      <Form className="form" onSubmit={handleSubmit}>
+        <Form.Group className="field"controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
             name="name"
@@ -52,7 +53,8 @@ export default function Login() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
-        <Form.Group  controlId="password">
+        <h1></h1>
+        <Form.Group  className="field"controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
             name="pass"
@@ -61,14 +63,14 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button  onClick={loginHandle} type="submit" disabled={!validateForm()}>
+        <h1></h1>
+        <Button className="button" onClick={loginHandle} type="submit" disabled={!validateForm()}>
           Login
         </Button>
+      <h2>You don't have an account? </h2>
+      <Button className="button"  onClick={handleClick} >Register now!</Button>
       </Form>
 
-      <h1>You don't have an account? </h1>
-      <Button onClick={handleClick} >Register now!</Button>
-
-    </div>
+      </div>
   );
   }

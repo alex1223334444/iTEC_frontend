@@ -1,0 +1,31 @@
+body{
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);    
+    overflow: hidden;
+}
+.form {
+    position: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin-left: 550px;
+    margin-top: 300px;
+}
+
+.field {
+    position: center;
+    margin-left: 500x;
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    position: center;
+    background-color: #b0e0e6;
+    margin-left: 50px;
+    border-radius: 12px;
+}
+
+.button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
-
+import "./Register.css"
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,8 +28,8 @@ export default function Register() {
 
   return (
     <div className="Register">
-      <Form onSubmit={handleSubmit}>
-        <Form.Group  controlId="email">
+      <Form className="form" onSubmit={handleSubmit}>
+        <Form.Group className="field" controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
             autoFocus
@@ -38,7 +38,8 @@ export default function Register() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
-        <Form.Group  controlId="password">
+        <h1></h1>
+        <Form.Group  className="field" controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
@@ -46,7 +47,8 @@ export default function Register() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button   type="submit" disabled={!validateForm()} onClick={createUser}>
+        <h1></h1>
+        <Button  className="button"  type="submit" disabled={!validateForm()} onClick={createUser}>
           Create
         </Button>
         
