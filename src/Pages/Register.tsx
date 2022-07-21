@@ -4,6 +4,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import "./Register.css"
+import Background from "../background.jpg"
+
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,7 +29,14 @@ export default function Register() {
 
 
   return (
-    <div className="Register">
+    <div className="Register" style={{ 
+      backgroundImage: `url(${Background})`,
+      position: "absolute",
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      width: '100vw',
+      height: '100vh'}} >
       <Form className="form" onSubmit={handleSubmit}>
         <Form.Group className="field" controlId="email">
           <Form.Label>Email</Form.Label>
